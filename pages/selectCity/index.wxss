@@ -1,0 +1,25 @@
+/* pages/master/readyOrder/readyOrder.wxss */
+.page{ padding-top: 20rpx;}
+.page_top{ background: #fff;}
+.section{ padding: 30rpx 0rpx 30rpx 10rpx;overflow: hidden; box-sizing: border-box;}
+.section .icon{ width: 90rpx; float: left; text-align: center}
+.section .icon image{ width: 45rpx; height: 45rpx;}
+.section .from_input{ width: calc(100% - 90rpx); padding-bottom: 15rpx; border-bottom: #C8C7CC solid 1.5rpx; box-sizing: border-box;}
+.section .from_input input{ width: 100%;}
+.section radio-group{ padding-right: 30rpx; padding-bottom: 10rpx;}
+.section radio-group label{ padding-left: 25rpx;}
+.section .desc{ width: 90%; height: 200rpx; padding: 0 10rpx; font-size: 32rpx; box-sizing: border-box; position:unset;}
+
+.section picker{ display: inline-block; width: 50%;}
+.section picker .picker{ color: #333}
+
+.page_bottom{ background: #fff}
+.page_bottom .sectionUpload{ padding: 20rpx; overflow: hidden; border-top: #C8C7CC solid 1.5rpx;}
+.page_bottom .sectionUpload .item{ width: 160rpx; float: left;}
+.page_bottom .sectionUpload .item image{ width: 150rpx; height: 150rpx;}
+.page_bottom .sectionUpload .hint{ width: 300rpx; font-size: 30rpx; line-height: 150rpx; color: #828282}
+
+
+
+
+

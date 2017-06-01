@@ -1,0 +1,57 @@
+/**app.wxss**/
+.h1,.h2,.h3,.h4,.h5,.h6{ display: block}
+page{
+    width: 100%;
+    position: relative;
+    color: #333;
+    background-color: #F0F0F0;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+}
+.fl{float: left}
+.fr{float: right}
+.clearfix:after{clear: both; display: table; content: " ";}
+.clear{clear: both;}
+.mp20{ margin-top: 20rpx}
+.mp15{ margin-top: 15rpx}
+.image_box{float: left;margin-right: 20rpx;}
+.img_circle{ border-radius: 50%;}
+.img_sicircle{border-radius: 15rpx;}
+input{ padding: 6rpx 12rpx;box-sizing: border-box;}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.btn_box{ padding: 40rpx 20rpx 60rpx; box-sizing: border-box;}
+.btn_box .themeBtn{border-radius:1px; color: #fff;font-size:18px; background: #3FAFEE;}
+.btn_box .themeBtn-hover{background: #20A3EC;}
+
+
+/*选择器*/
+.selector{ width: 100%; position: fixed; bottom: 0; left: 0; z-index: 999999}
+.selector .inner_box{ position: relative; z-index: 999999}
+.selector .header_box{ padding: 25rpx 0; overflow: hidden; box-sizing: border-box; background: #FBF9FE;}
+.selector .header_box .item{ float: left; font-size: 34rpx; color: #586C94; box-sizing: border-box;}
+.selector .header_box .l{ width: 25%; padding-left: 25rpx;}
+.selector .header_box .c{ width: 50%; text-align: center}
+.selector .header_box .r{ width: 25%; text-align: right; padding-right: 25rpx;}
+.selector .selected{ height: 90rpx;}
+.selector .picker_box{ width: 100%; height: 485rpx; background: #fff;}
+.selector .picker_box picker-view-column{ text-align: center;}
+.selector .picker_box picker-view-column view{ line-height: 90rpx;}
+.selector .layer{ width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 10; background:rgba(0,0,0,0.5); }

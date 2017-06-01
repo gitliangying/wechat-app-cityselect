@@ -1,0 +1,110 @@
+<view class="page">
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="page_top">
+
+            <view class="section">
+                <view class="icon"><image src="/images/ft-xzwtlx.png"></image></view>
+                <view class="from_input fl">
+                    <input placeholder="输入姓名" name="doname" auto-focus />
+                </view>
+            </view>
+
+            <view class="section">
+                <view class="icon"><image src="/images/ft-xb.png"></image></view>
+                <view class="from_input fl" bindtap="sexSheetTap">
+                    {{sexText}}
+                </view>
+            </view>
+
+            <view class="section">
+                <view class="icon"><image src="/images/ft-xzylsr.png"></image></view>
+                <view class="from_input fl" data-mold="dateTime" bindtap="risePicker">
+                    {{dateText}}
+                </view>
+            </view>
+
+            <view class="section">
+                <view class="icon"><image src="/images/ft-xzcsd.png"></image></view>
+                <view class="from_input fl" data-mold="city" bindtap="risePicker">
+                    {{cityText}}
+                </view>
+            </view>
+
+        </view>
+
+        <view class="page_bottom mp20">
+            <view class="section">
+                <textarea class="desc" name="content" placeholder="请详细描述您的问题" />
+            </view>
+            <view class="sectionUpload">
+
+                <block wx:for="{{photoList}}" wx:for-item="l">
+                <view class="item"><image src="{{imgUrl + l}}"></image></view>
+                </block>
+
+
+                <view class="item upload" bindtap="uploadImg"><image src="/images/ft-tjtp.png"></image></view>
+                <view hidden="{{isTip}}" class="item hint">添加手相或面相图片</view>
+            </view>
+        </view>
+
+        <view class="btn_box">
+            <button formType="submit" class="btn themeBtn"  disabled="{{isBtn}}">提交订单</button>
+        </view>
+    </form>
+
+    <view hidden="{{isDate}}" class="selector">
+        <view class="inner_box">
+            <view class="header_box">
+                <view class="item l" data-act="cancel" data-mold="dateTime" bindtap="ideChoice">取消</view>
+                <view class="item c">请选择</view>
+                <view class="item r" data-act="confirm" data-mold="dateTime" bindtap="ideChoice">确定</view>
+            </view>
+
+            <picker-view class="picker_box" indicator-class="selected" value="{{dateValue}}" bindchange="dateChange">
+                <picker-view-column>
+                    <view wx:for="{{years}}">{{item}}年</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{months}}">{{item}}月</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{days}}" >{{item}}日</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{hours}}" >{{item}}时</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{hours}}" >{{item}}分</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+        <view class="layer"></view>
+    </view>
+
+    <view hidden="{{isCity}}" class="selector">
+        <view class="inner_box">
+            <view class="header_box">
+                <view class="item l" data-act="cancel" data-mold="city" bindtap="ideChoice">取消</view>
+                <view class="item c">请选择</view>
+                <view class="item r" data-act="confirm" data-mold="city" bindtap="ideChoice">确定</view>
+            </view>
+
+            <picker-view class="picker_box" indicator-class="selected" value="{{cityValue}}" bindchange="cityChange">
+                <picker-view-column>
+                    <view wx:for="{{provinces}}">{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{citys}}">{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{countys}}" >{{item}}</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+        <view class="layer"></view>
+    </view>
+
+</view>
+
